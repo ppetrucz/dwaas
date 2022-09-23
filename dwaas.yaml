@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dwaas
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: argocd
+    server: https://kubernetes.default.svc
+  project: dwaas
+  source:
+    path: instances
+    repoURL: https://github.com/ppetrucz/dwaas
+    targetRevision: master
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false
+    syncOptions:
+      - CreateNamespace=true
