@@ -3,6 +3,8 @@ kind: Application
 metadata:
   name: dw-05d-app
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: dw-05d
