@@ -8,7 +8,7 @@ metadata:
 spec:
   destination:
     namespace: dw-05d
-    server: https://kubernetes.default.svc
+    server: cluster-argotest
   project: dwaas
   source:
     path: overlays/05d

@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  namespace: argocd
+  name: cluster-argotest
+  labels:
+    argocd.argoproj.io/secret-type: cluster
+type: Opaque
+stringData:
+  name: cluster-argotest
+  server: https://127.0.0.1:49159
+  config: |
+    {
+      "bearerToken": "eyJhbGciOiJSUzI1NiIsImtpZCI6IlVZME1NaGJfU2FrUzJ0U3UzT0FDY0RXZnBNcnZMc0ZZUlVtZzZsMmFxdUkifQ.eyJhdWQiOlsiaHR0cHM6Ly9rdWJlcm5ldGVzLmRlZmF1bHQuc3ZjLmNsdXN0ZXIubG9jYWwiXSwiZXhwIjoxNjYzOTU5NzYwLCJpYXQiOjE2NjM5NTYxNjAsImlzcyI6Imh0dHBzOi8va3ViZXJuZXRlcy5kZWZhdWx0LnN2Yy5jbHVzdGVyLmxvY2FsIiwia3ViZXJuZXRlcy5pbyI6eyJuYW1lc3BhY2UiOiJkZWZhdWx0Iiwic2VydmljZWFjY291bnQiOnsibmFtZSI6ImRlZmF1bHQiLCJ1aWQiOiI5OGIzMmRjNS1jMDhiLTQ4NmMtYTIyNi1lNTU5NmViMDYzZjQifX0sIm5iZiI6MTY2Mzk1NjE2MCwic3ViIjoic3lzdGVtOnNlcnZpY2VhY2NvdW50OmRlZmF1bHQ6ZGVmYXVsdCJ9.f7oW6DHZxlVRFwDVdJiJQPoKJCxrLi0tGWLC9RWJ02XV0zm8asJk_bhRc6lHg-BsUc8Ef0luNFrJXvkTbpVT9v4yJ_uPr-8abKxteHCm-SAFk-bVYTNPDeDkOJtDQh9yPvezy9jKQQe65le93gieyx3VOZWPQa38GSbzsYyGKObjs5ivQELKT2GBSZJl537hp88WfjCThujp11-TuLJfDroZ7iMrPOD7i-NTOOIy0cJ-8pEdyCfTlyd3qs8_32BODiuVhn5snsBbofXoW9GOQhvZnfLbJnA5ATFm06OYQy8GnWFG385by--iSbtGVMX_uXvo_btpYr9_Mzc_GTW2uw",
+      "tlsClientConfig": {
+        "insecure": true
+      }
+    }
